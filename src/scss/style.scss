@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@import "variables.scss";
+@import "mixin.scss";
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+*::selection {
+  background-color: #3f5ca1;
+  color: #fff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-width: 320px;
+  margin: 0;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+table {
+  backface-visibility: visible;
+}
+
+td, th {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+}
+
+input,
+textarea,
+select{
+  background: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus{
+  outline: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background: #f0f0f0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
