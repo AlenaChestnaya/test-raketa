@@ -45,19 +45,39 @@
                 <div class="catalog__header">
                     <h1>Наши номера</h1>
                     <div class="sort-list__container">
-                        <button class="sort-list__toggle" title="Список фильтров"></button>
+                        <button class="sort-list__toggle" title="Список фильтров">
+                            <svg width="12" height="6">
+                                <use xlink:href="#sprite-toggle"></use>
+                            </svg>
+                        </button>
                         <ul class="sort-list">
                             <li class="sort-list__item">
-                                <button class="sort-list__button">По площади</button>
+                                <button class="sort-list__button">
+                                    <svg width="5" height="10" aria-label="От большего к меньшему">
+                                        <use xlink:href="#sprite-arrow-up"></use>
+                                    </svg>По площади
+                                </button>
                             </li>
                             <li class="sort-list__item">
-                                <button class="sort-list__button">По площади</button>
+                                <button class="sort-list__button">
+                                    <svg width="5" height="10" aria-label="От меньшего к большему">
+                                        <use xlink:href="#sprite-arrow-down"></use>
+                                    </svg>По площади
+                                </button>
                             </li>
                             <li class="sort-list__item">
-                                <button class="sort-list__button">По цене</button>
+                                <button class="sort-list__button">
+                                    <svg width="5" height="10" aria-label="От большего к меньшему">
+                                        <use xlink:href="#sprite-arrow-up"></use>
+                                    </svg>По цене
+                                </button>
                             </li>
                             <li class="sort-list__item">
-                                <button class="sort-list__button">По цене</button>
+                                <button class="sort-list__button">
+                                    <svg width="5" height="10" aria-label="От меньшего к большему">
+                                        <use xlink:href="#sprite-arrow-down"></use>
+                                    </svg>По цене
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -65,7 +85,44 @@
                 <div class="catalog__body">
                     <section class="filters">
                         <h2 class="visually-hidden">Фильтры каталога</h2>
-                        <form class="filters-form"></form>
+                        <form class="filters-form">
+                            <div class="filters-form__block">
+                                <h3 class="filters-form__title">Цена за сутки, <span class="filters-form__symbol">₽</span></h3>
+                                <input type="text" class="filters-form__input" placeholder="от 100">
+                                <input type="text" class="filters-form__input" placeholder="до 600">
+                            </div>
+                            <div class="filters-form__block">
+                                <h3 class="filters-form__title">Площадь</h3>
+                                <input type="checkbox" class="visually-hidden" name="space" value="0,63" id="space-1">
+                                <label class="filters-form__checkbox" for="space-1">0,63 м2</label>
+                                <input type="checkbox" class="visually-hidden" name="space" value="0,90" id="space-2">
+                                <label class="filters-form__checkbox" for="space-2">0,90 м2</label>
+                                <input type="checkbox" class="visually-hidden" name="space" value="1,13" id="space-3">
+                                <label class="filters-form__checkbox" for="space-3">1,13 м2</label>
+                                <input type="checkbox" class="visually-hidden" name="space" value="1,56" id="space-4">
+                                <label class="filters-form__checkbox" for="space-4">1,56 м2</label>
+                                <input type="checkbox" class="visually-hidden" name="space" value="2,56" id="space-5">
+                                <label class="filters-form__checkbox" for="space-5">2,56 м2</label>
+                                <input type="checkbox" class="visually-hidden" name="space" value="2,88" id="space-6">
+                                <label class="filters-form__checkbox" for="space-6">2,88 м2</label>
+                            </div>
+                            <div class="filters-form__block">
+                                <h3 class="filters-form__title">Оснащение номера</h3>
+                                <input type="checkbox" class="visually-hidden" name="equipment" value="empty" id="equipment-1">
+                                <label class="filters-form__checkbox" for="equipment-1">Пустой номер</label>
+                                <input type="checkbox" class="visually-hidden" name="equipment" value="bed" id="equipment-2">
+                                <label class="filters-form__checkbox" for="equipment-2">Лежак</label>
+                                <input type="checkbox" class="visually-hidden" name="equipment" value="scratcher" id="equipment-3">
+                                <label class="filters-form__checkbox" for="equipment-3">Когтеточка</label>
+                                <input type="checkbox" class="visually-hidden" name="equipment" value="game" id="equipment-4">
+                                <label class="filters-form__checkbox" for="equipment-4">Игровой-комплекс</label>
+                                <input type="checkbox" class="visually-hidden" name="equipment" value="house" id="equipment-5">
+                                <label class="filters-form__checkbox" for="equipment-5">Домик</label>
+                            </div>
+
+                            <input type="submit" class="filters-form__submit" value="Применить">
+                            <button type="button" class="filters-form__reset">Сбросить фильтр</button>
+                        </form>
                     </section>
                     
                     <section class="products">
@@ -79,14 +136,22 @@
                                 <ul class="product-card__description product-properties">
                                     <li class="product-properties__item product-properties__item--space">Площадь - <span>0,63 м2</span></li>
                                     <li class="product-properties__item product-properties__item--equipment">Оснащение номера 
-                                        <ul class="product-card__equipment">
-                                            <li></li>
+                                        <ul class="product-equipment">
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="пустой номер">
+                                                    <use xlink:href="#sprite-empty"></use>
+                                                </svg>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="product-properties__item product-properties__item--price">Цена за сутки: <span>100₽</span></li>
                                 </ul>
                                 <button class="product-card__submit">Забронировать 
-                                    <span class="product-card__submit-icon"></span>
+                                    <span class="product-card__submit-icon">
+                                        <svg width="20" height="17">
+                                            <use xlink:href="#sprite-paw"></use>
+                                        </svg>
+                                    </span>
                                 </button>
                             </li>
                             <li class="product-card">
@@ -98,14 +163,27 @@
                                     <li class="product-properties__item product-properties__item--size">Размеры (ШхГхВ) - <span>90х100х180 см</span></li>
                                     <li class="product-properties__item product-properties__item--space">Площадь - <span>0,90 м2</span></li>
                                     <li class="product-properties__item product-properties__item--equipment">Оснащение номера 
-                                        <ul class="product-card__equipment">
-                                            <li></li>
+                                        <ul class="product-equipment">
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="12" aria-label="лежак">
+                                                    <use xlink:href="#sprite-bed"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="14" height="16" aria-label="когтеточка">
+                                                    <use xlink:href="#sprite-scratcher"></use>
+                                                </svg>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="product-properties__item product-properties__item--price">Цена за сутки: <span>200₽</span></li>
                                 </ul>
                                 <button class="product-card__submit">Забронировать 
-                                    <span class="product-card__submit-icon"></span>
+                                    <span class="product-card__submit-icon">
+                                        <svg width="20" height="17">
+                                            <use xlink:href="#sprite-paw"></use>
+                                        </svg>
+                                    </span>
                                 </button>
                             </li>
                             <li class="product-card">
@@ -117,14 +195,32 @@
                                     <li class="product-properties__item product-properties__item--size">Размеры (ШхГхВ) - <span>100х125х180 см</span></li>
                                     <li class="product-properties__item product-properties__item--space">Площадь - <span>1,13 м2</span></li>
                                     <li class="product-properties__item product-properties__item--equipment">Оснащение номера 
-                                        <ul class="product-card__equipment">
-                                            <li></li>
+                                        <ul class="product-equipment">
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="12" aria-label="лежак">
+                                                    <use xlink:href="#sprite-bed"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="14" height="16" aria-label="когтеточка">
+                                                    <use xlink:href="#sprite-scratcher"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="игровой комплекс">
+                                                    <use xlink:href="#sprite-game"></use>
+                                                </svg>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="product-properties__item product-properties__item--price">Цена за сутки: <span>250₽</span></li>
                                 </ul>
                                 <button class="product-card__submit">Забронировать 
-                                    <span class="product-card__submit-icon"></span>
+                                    <span class="product-card__submit-icon">
+                                        <svg width="20" height="17">
+                                            <use xlink:href="#sprite-paw"></use>
+                                        </svg>
+                                    </span>
                                 </button>
                             </li>
                             <li class="product-card">
@@ -136,14 +232,32 @@
                                     <li class="product-properties__item product-properties__item--size">Размеры (ШхГхВ) - <span>125х125х180 см</span></li>
                                     <li class="product-properties__item product-properties__item--space">Площадь - <span>1,56 м2</span></li>
                                     <li class="product-properties__item product-properties__item--equipment">Оснащение номера 
-                                        <ul class="product-card__equipment">
-                                            <li></li>
+                                        <ul class="product-equipment">
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="12" aria-label="лежак">
+                                                    <use xlink:href="#sprite-bed"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="14" height="16" aria-label="когтеточка">
+                                                    <use xlink:href="#sprite-scratcher"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="игровой комплекс">
+                                                    <use xlink:href="#sprite-game"></use>
+                                                </svg>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="product-properties__item product-properties__item--price">Цена за сутки: <span>350₽</span></li>
                                 </ul>
                                 <button class="product-card__submit">Забронировать 
-                                    <span class="product-card__submit-icon"></span>
+                                    <span class="product-card__submit-icon">
+                                        <svg width="20" height="17">
+                                            <use xlink:href="#sprite-paw"></use>
+                                        </svg>
+                                    </span>
                                 </button>
                             </li>
                             <li class="product-card">
@@ -155,14 +269,37 @@
                                     <li class="product-properties__item product-properties__item--size">Размеры (ШхГхВ) - <span>160х160х180 см</span></li>
                                     <li class="product-properties__item product-properties__item--space">Площадь - <span>2,56 м2</span></li>
                                     <li class="product-properties__item product-properties__item--equipment">Оснащение номера 
-                                        <ul class="product-card__equipment">
-                                            <li></li>
+                                        <ul class="product-equipment">
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="12" aria-label="лежак">
+                                                    <use xlink:href="#sprite-bed"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="14" height="16" aria-label="когтеточка">
+                                                    <use xlink:href="#sprite-scratcher"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="игровой комплекс">
+                                                    <use xlink:href="#sprite-game"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="домик">
+                                                    <use xlink:href="#sprite-house"></use>
+                                                </svg>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="product-properties__item product-properties__item--price">Цена за сутки: <span>500₽</span></li>
                                 </ul>
                                 <button class="product-card__submit">Забронировать 
-                                    <span class="product-card__submit-icon"></span>
+                                    <span class="product-card__submit-icon">
+                                        <svg width="20" height="17">
+                                            <use xlink:href="#sprite-paw"></use>
+                                        </svg>
+                                    </span>
                                 </button>
                             </li>
                             <li class="product-card">
@@ -174,14 +311,37 @@
                                     <li class="product-properties__item product-properties__item--size">Размеры (ШхГхВ) - <span>180х160х180 см</span></li>
                                     <li class="product-properties__item product-properties__item--space">Площадь - <span>2,88 м2</span></li>
                                     <li class="product-properties__item product-properties__item--equipment">Оснащение номера 
-                                        <ul class="product-card__equipment">
-                                            <li></li>
+                                        <ul class="product-equipment">
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="12" aria-label="лежак">
+                                                    <use xlink:href="#sprite-bed"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="14" height="16" aria-label="когтеточка">
+                                                    <use xlink:href="#sprite-scratcher"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="игровой комплекс">
+                                                    <use xlink:href="#sprite-game"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="product-equipment__item">
+                                                <svg width="16" height="16" aria-label="домик">
+                                                    <use xlink:href="#sprite-house"></use>
+                                                </svg>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="product-properties__item product-properties__item--price">Цена за сутки: <span>600₽</span></li>
                                 </ul>
                                 <button class="product-card__submit">Забронировать 
-                                    <span class="product-card__submit-icon"></span>
+                                    <span class="product-card__submit-icon">
+                                        <svg width="20" height="17">
+                                            <use xlink:href="#sprite-paw"></use>
+                                        </svg>
+                                    </span>
                                 </button>
                             </li>
                         </ul>
@@ -190,6 +350,20 @@
             </article>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="center-wrapper">
+            <div class="footer__wrapper">
+                <span class="footer__copyright">
+                    <svg width="9" height="9">
+                        <use xlink:href="#sprite-copyright"></use>
+                    </svg> 2020 Все права защищены
+                </span>
+                <a class="footer__politics" href="#">Политика конфиденциальности</a>
+                <span class="footer__dev">Сделано в <a href="#" class="footer__link">Koteyka_Production</a></span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
