@@ -8,10 +8,17 @@
 </head>
 
 <body>
+    <div style="display: none">
+        <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="header">
         <div class="center-wrapper">
             <div class="header__wrapper">
-                <div class="logo"></div>
+                <div class="logo">
+                    <svg width="64" height="52">
+                        <use xlink:href="#sprite-logo"></use>
+                    </svg>
+                </div>
                 <nav class="main-nav">
                     <ul class="nav-list">
                         <li class="nav-list__item">
@@ -38,6 +45,7 @@
                 <div class="catalog__header">
                     <h1>Наши номера</h1>
                     <div class="sort-list__container">
+                        <button class="sort-list__toggle" title="Список фильтров"></button>
                         <ul class="sort-list">
                             <li class="sort-list__item">
                                 <button class="sort-list__button">По площади</button>
@@ -52,7 +60,6 @@
                                 <button class="sort-list__button">По цене</button>
                             </li>
                         </ul>
-                        <button class="sort-list__toggle"></button>
                     </div>
                 </div>
                 <div class="catalog__body">
