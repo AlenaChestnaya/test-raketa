@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var less = require("gulp-scss");
+var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -19,7 +19,7 @@ var del = require("del");
 gulp.task("style", function() {
   gulp.src("src/scss/style.scss")
     .pipe(plumber())
-    .pipe(scss())
+    .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -93,4 +93,8 @@ gulp.task("copy", function() {
 
 gulp.task("build", function(done) {
   run("clean", "copy", "style", "images", "webp", "sprite", "html", done);
+});
+
+gulp.task("dev", function(done) {
+  run("build", "serve", done);
 });
