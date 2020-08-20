@@ -39,7 +39,11 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("src/scss/**/*.scss", ["style"]);
+  gulp.watch("src/scss/**/*.scss", function () {
+    setTimeout(function () {
+      gulp.start("style");
+    }, 1000);
+  });
   gulp.watch("src/*.html", ["html"]).on("change", server.reload);
 });
 

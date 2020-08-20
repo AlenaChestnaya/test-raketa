@@ -1,6 +1,61 @@
 .filters-form {
-    background-color: mediumaquamarine;
+    max-width: 211px;
 }
 .filters-form__block {
-    border: 1px dotted pink;
+    margin-bottom: 35px;
+}
+.filters-form__row {
+    display: flex;
+}
+.filters-form__input {
+    width: 100px;
+    padding: 3px 5px;
+}
+.filters-form__input + .filters-form__input {
+    margin-left: 10px;
+}
+.filters-form__checkbox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #E1E1E1;
+        margin-right: 10px;
+    }
+
+    &::after {
+        content: '';
+        display: none;
+        width: 10px;
+        height: 7px;
+        background-image: url('/img/sprite-check.svg');
+        position: absolute;
+        left: 5px;
+    }
+}
+
+input[type="checkbox"]:checked + .filters-form__checkbox::after {
+    display: block;
+}
+.filters-form__submit {
+    @include button;
+    display: block;
+    background: $yellow;
+    border: 2px solid $yellow;
+    margin-bottom: 11px;
+    width: 185px;
+    padding: 12px 15px 13px;
+}
+.filters-form__reset {
+    @include button;
+    border: 2px solid $yellow;
+    box-shadow: $shadow;
+    width: 185px;
+    padding: 10px 15px 11px;
 }

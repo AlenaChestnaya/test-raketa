@@ -2,8 +2,14 @@
     background-color: lightgreen;
 }
 .catalog__header {
-    border: 1px solid blue;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 .catalog__body {
     border: 1px solid rgb(28, 28, 44);
+    display: flex;
+}
+.catalog__filters {
+    margin-right: 110px;
 }

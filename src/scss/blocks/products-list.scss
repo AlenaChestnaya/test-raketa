@@ -1,3 +1,6 @@
 .products-list {
     background-color: mediumspringgreen;
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
 }

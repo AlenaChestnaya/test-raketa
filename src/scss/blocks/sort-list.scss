@@ -1,6 +1,17 @@
 .sort-list {
-    background-color: lightsteelblue;
+    //background-color: lightsteelblue;
+    @include list-reset;
 }
 .sort-list__container {
     border: 1px dashed green;
+    position: relative;
+}
+.sort-list__item:not(:first-child) {
+    display: none;
+}
+.sort-list__button {
+    appearance: none;
+    border: none;
+    background: none;
+    padding-left: 20px;
 }
