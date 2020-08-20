@@ -2,6 +2,15 @@
 
 @import "variables.scss";
 @import "mixin.scss";
+@import "blocks/header.scss";
+@import "blocks/nav-list.scss";
+@import "blocks/catalog.scss";
+@import "blocks/sort-list.scss";
+@import "blocks/filters-form.scss";
+@import "blocks/products-list.scss";
+@import "blocks/product-card.scss";
+@import "blocks/footer.scss";
+
 
 *,
 *::before,
@@ -76,6 +85,9 @@ textarea {
 input[type="submit"] {
   border: none;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .visually-hidden {
@@ -89,4 +101,8 @@ input[type="submit"] {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.center-wrapper {
+  border: 1px solid red;
 }
