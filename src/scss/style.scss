@@ -95,9 +95,11 @@ body {
   height: 100%;
   min-width: 320px;
   margin: 0;
-  font-family: 'Lato', 'Roboto', sans-serif;
-  font-size: 100%;
+  font-family: $main-text;
   font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -106,6 +108,13 @@ h1,
 h2,
 h3 {
   font-family: 'Rubik', 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  color: #151B28;
 }
 
 img {
@@ -160,6 +169,13 @@ input[type="submit"] {
 label,
 button {
   cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: $main-text;
 }
 
 .visually-hidden {

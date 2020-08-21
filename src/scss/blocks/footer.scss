@@ -1,5 +1,8 @@
 .footer {
     border-top: 1px solid #EFEFEF;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8F8F8F;
 }
 .footer__wrapper {
     display: flex;
@@ -17,6 +20,9 @@
 .footer__politics,
 .footer__link {
     text-decoration: none;
+}
+.footer__link {
+    color: #000000;
 }
 .footer__dev {
     margin-left: auto;

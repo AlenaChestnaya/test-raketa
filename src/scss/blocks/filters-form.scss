@@ -9,10 +9,23 @@
 }
 .filters-form__title {
     font-family: $main-text;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.filters-form__symbol {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
 }
 .filters-form__input {
     width: 100px;
     padding: 3px 5px;
+    border: 1px solid #E1E1E1;
+
+    &::placeholder {
+        color: $black;
+    }
 }
 .filters-form__input + .filters-form__input {
     margin-left: 10px;

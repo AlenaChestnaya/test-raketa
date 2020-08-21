@@ -1,3 +1,7 @@
-.product-properties__item--equipment {
-    display: flex;
+.product-properties__item {
+    margin-top: 10px;
+
+    &--equipment {
+        display: flex;
+    }
 }

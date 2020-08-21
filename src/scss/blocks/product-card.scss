@@ -22,16 +22,24 @@
 }
 .product-card__title {
     margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
 }
 .product-card__description {
     @include list-reset;
     margin-top: auto;
 }
+.product-card__cost {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
 .product-card__submit {
     @include button;
     position: relative;
     background: #FF7236;
-    padding: 17px 10px 19px;
+    padding: 14px 10px 15px;
     margin-top: 25px;
     color: $white;
     border: none;
