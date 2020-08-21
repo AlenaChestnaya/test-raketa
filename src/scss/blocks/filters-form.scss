@@ -7,6 +7,9 @@
 .filters-form__row {
     display: flex;
 }
+.filters-form__title {
+    font-family: $main-text;
+}
 .filters-form__input {
     width: 100px;
     padding: 3px 5px;
@@ -58,4 +61,5 @@ input[type="checkbox"]:checked + .filters-form__checkbox::after {
     box-shadow: $shadow;
     width: 185px;
     padding: 10px 15px 11px;
+    background-color: white;
 }

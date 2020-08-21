@@ -1,10 +1,9 @@
-.catalog {
-    background-color: lightgreen;
-}
 .catalog__header {
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
+    // for devs
+    padding: 50px 0;
 }
 .catalog__body {
     border: 1px solid rgb(28, 28, 44);

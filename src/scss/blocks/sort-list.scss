@@ -1,17 +1,57 @@
 .sort-list {
-    //background-color: lightsteelblue;
     @include list-reset;
+    box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+    border-radius: 19px;
+    min-width: 174px;
+    position: absolute;
+
+    &--open {
+      border-radius: 4px;  
+
+        .sort-list__item:not(:first-child) {
+            display: block;
+        }
+    }
 }
 .sort-list__container {
-    border: 1px dashed green;
     position: relative;
+    min-width: 174px;
 }
 .sort-list__item:not(:first-child) {
     display: none;
+}
+.sort-list__item + .sort-list__item {
+    margin-top: 10px;
 }
 .sort-list__button {
     appearance: none;
     border: none;
     background: none;
-    padding-left: 20px;
+    padding: 12px 20px;
+
+    svg {
+        margin-right: 5px;
+    }
+}
+.sort-list__toggle {
+    position: absolute;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    right: 5px;
+    top: 0;
+    padding: 11px 15px 15px;
+
+    svg {
+        fill: none;
+    }
+
+    &:hover {
+        background-color: #EFEFEF;
+    }
+
+    &--open {
+        transform: rotate(180deg);
+    }
 }

@@ -10,6 +10,70 @@
 @import "blocks/products-list.scss";
 @import "blocks/product-card.scss";
 @import "blocks/footer.scss";
+@import "blocks/product-equipment.scss";
+@import "blocks/product-properties.scss";
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik-Medium'), local('Rubik-500'),
+      url('../fonts/rubik-v10-latin_cyrillic-500.eot'),
+      url('../fonts/rubik-v10-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/rubik-v10-latin_cyrillic-500.woff2') format('woff2'),
+      url('../fonts/rubik-v10-latin_cyrillic-500.woff') format('woff'),
+      url('../fonts/rubik-v10-latin_cyrillic-500.ttf') format('truetype'),
+      url('../fonts/rubik-v10-latin_cyrillic-500.svg#Rubik') format('svg');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik-Bold'), local('Rubik-700'),
+      url('../fonts/rubik-v10-latin_cyrillic-700.eot'),
+      url('../fonts/rubik-v10-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/rubik-v10-latin_cyrillic-700.woff2') format('woff2'),
+      url('../fonts/rubik-v10-latin_cyrillic-700.woff') format('woff'),
+      url('../fonts/rubik-v10-latin_cyrillic-700.ttf') format('truetype'),
+      url('../fonts/rubik-v10-latin_cyrillic-700.svg#Rubik') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Lato-Regular'),
+      url('../fonts/Lato-Regular.eot'),
+      url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Regular.woff2') format('woff2'),
+      url('../fonts/Lato-Regular.woff') format('woff'),
+      url('../fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Lato-Medium'),
+      url('../fonts/Lato-Medium.eot'),
+      url('../fonts/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Medium.woff2') format('woff2'),
+      url('../fonts/Lato-Medium.woff') format('woff'),
+      url('../fonts/Lato-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Lato-Semibold'),
+      url('../fonts/Lato-Semibold.eot'),
+      url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Semibold.woff2') format('woff2'),
+      url('../fonts/Lato-Semibold.woff') format('woff'),
+      url('../fonts/Lato-Semibold.ttf') format('truetype');
+}
 
 *,
 *::before,
@@ -31,11 +95,17 @@ body {
   height: 100%;
   min-width: 320px;
   margin: 0;
+  font-family: 'Lato', 'Roboto', sans-serif;
   font-size: 100%;
   font-weight: 400;
-  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Rubik', 'Roboto', sans-serif;
 }
 
 img {
@@ -108,5 +178,6 @@ button {
 .center-wrapper {
   border: 1px solid red;
   max-width: 1190px;
+  width: 100%;
   margin: 0 auto;
 }

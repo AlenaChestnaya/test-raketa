@@ -1,0 +1,7 @@
+.product-equipment {
+    @include list-reset;
+    display: flex;
+}
+.product-equipment__item {
+    margin-left: 12px;
+}
