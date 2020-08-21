@@ -16,9 +16,11 @@
         <div class="center-wrapper">
             <div class="header__wrapper">
                 <div class="logo">
-                    <svg width="64" height="52">
-                        <use xlink:href="#sprite-logo"></use>
-                    </svg>
+                    <a href="#" title="Вернуться на главную">
+                        <svg width="64" height="52" aria-label="Логотип компании">
+                            <use xlink:href="#sprite-logo"></use>
+                        </svg>
+                    </a>
                 </div>
                 <nav class="main-nav">
                     <ul class="nav-list">
@@ -46,35 +48,30 @@
                 <div class="catalog__header">
                     <h1>Наши номера</h1>
                     <div class="sort-list__container">
-                        <button class="sort-list__toggle" title="Список фильтров">
-                            <svg width="12" height="6">
-                                <use xlink:href="#sprite-toggle"></use>
-                            </svg>
-                        </button>
-                        <ul class="sort-list">
+                        <ul class="sort-list" :class="{'sort-list--open': isListOpened}" @click="openList()">
                             <li class="sort-list__item">
-                                <button class="sort-list__button">
+                                <button class="sort-list__button" @click="applySort('area', 'up')">
                                     <svg width="5" height="10" aria-label="От большего к меньшему">
                                         <use xlink:href="#sprite-arrow-up"></use>
                                     </svg>По площади
                                 </button>
                             </li>
                             <li class="sort-list__item">
-                                <button class="sort-list__button">
+                                <button class="sort-list__button" @click="applySort('area', 'down')">
                                     <svg width="5" height="10" aria-label="От меньшего к большему">
                                         <use xlink:href="#sprite-arrow-down"></use>
                                     </svg>По площади
                                 </button>
                             </li>
                             <li class="sort-list__item">
-                                <button class="sort-list__button">
+                                <button class="sort-list__button" @click="applySort('price', 'up')">
                                     <svg width="5" height="10" aria-label="От большего к меньшему">
                                         <use xlink:href="#sprite-arrow-up"></use>
                                     </svg>По цене
                                 </button>
                             </li>
                             <li class="sort-list__item">
-                                <button class="sort-list__button">
+                                <button class="sort-list__button" @click="applySort('price', 'down')">
                                     <svg width="5" height="10" aria-label="От меньшего к большему">
                                         <use xlink:href="#sprite-arrow-down"></use>
                                     </svg>По цене

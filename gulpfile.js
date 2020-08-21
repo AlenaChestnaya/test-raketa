@@ -44,6 +44,7 @@ gulp.task("serve", function() {
       gulp.start("style");
     }, 1000);
   });
+  gulp.watch("src/js/*.js");
   gulp.watch("src/*.html", ["html"]).on("change", server.reload);
 });
 

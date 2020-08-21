@@ -157,10 +157,43 @@ var cards = [
 var app = new Vue({
   el: '#catalog',
   data: {
-    cards: cards
+    cards: cards,
+    isListOpened: false,
+    sortField: 'area',
+    sortOrder: 'down'
   },
   methods: {
-  
+    openList: function() {
+        this.isListOpened = !this.isListOpened;
+    },
+    applySort: function(field, order) {
+        this.sortField = field;
+        this.sortOrder = order;
+        console.log(field, order);
+        var compareCards;
+        if (field === 'area') {
+            if (order === 'up') {
+                compareCards = function(a,b) {
+                    return b.areaNumber - a.areaNumber;
+                }
+            } else {
+                compareCards = function(a,b) {
+                    return a.areaNumber - b.areaNumber;
+                }
+            }
+        } else {
+            if (order === 'up') {
+                compareCards = function(a,b) {
+                    return b.price - a.price;
+                }
+            } else {
+                compareCards = function(a,b) {
+                    return a.price - b.price;
+                }
+            }
+        }
+        this.cards.sort(compareCards);
+    },
   },
   computed: {
     
@@ -169,8 +202,3 @@ var app = new Vue({
   
   }
 });
-
-
-
-// тоггл класс у сорт-листа
-// тоггл класс у бургера
